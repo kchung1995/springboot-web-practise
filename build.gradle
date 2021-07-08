@@ -40,7 +40,11 @@ repositories {
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.projectlombok:lombok')
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('com.h2database:h2')
     testCompile('org.springframework.boot:spring-boot-starter-test')
     //특정 버전을 명시하지 않아야 맨 위 'classpath' 내부에 명시된 버전을 사용함.
     //이렇게 하면 각 라이브러리의 버전 관리가 한곳으로 집중되고, 따라서 버전 충돌을 예방할 수 있다.
+
+
 }
