@@ -8,7 +8,7 @@
                 <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
                 {{#userName}}
                     Logged in as: <span id="user">{{userName}}</span>
-                    <a href="/logout" class="btn btn-info active" role="button>Logout</a>
+                    <a href="/logout" class="btn btn-info active" role="button">Logout</a>
                 {{/userName}}
                 {{^userName}}
                     <a href="/oauth2/authorization/google"
@@ -19,7 +19,7 @@
 
         <br>
         <!-- 목록 출력 영역 -->
-        <table class = "table table=horizontal table=bordered">
+        <table class = "table table-horizontal table-bordered">
             <thead class="thead-strong">
             <tr>
                 <th>게시글번호</th>
