@@ -50,8 +50,6 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-oauth2-client')
     //spring-seesion-jdbc를 위한 dependency
     compile('org.springframework.session:spring-session-jdbc')
-    //postgresql
-    compile('org.postgresql:postgresql')
     //spring security 테스트를 위한 도구
     testCompile("org.springframework.security:spring-security-test")
 
