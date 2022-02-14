@@ -15,9 +15,9 @@ cache:
 script: "./gradlew clean build"
 
 before_deploy:
-  - zip -r springboot-org.example.springboot.org.example.springboot.web-practise
+  - zip -r springboot-web-practise
   - mkdir -p deploy
-  - mv springboot-org.example.springboot.org.example.springboot.web-practise.zip deploy/springboot-org.example.springboot.org.example.springboot.web-practise.zip
+  - mv springboot-web-practise.zip deploy/springboot-web-practise.zip
 
 deploy:
   - provider: s3
