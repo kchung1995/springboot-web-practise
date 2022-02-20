@@ -1,6 +1,6 @@
 # SpringBoot Web Practise
 
-'스프링 부트와 AWS로 혼자 구현하는 웹 서비스' (이동욱 저) 를 따라하며 Spring Boot의 기본과 AWS 배포에 대해 공부하는 과정을 담은 repository입니다.  
+['스프링 부트와 AWS로 혼자 구현하는 웹 서비스' (이동욱 저)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788965402602) 를 따라하며 Spring Boot의 기본과 AWS 배포에 대해 공부하는 과정을 담은 repository입니다.  
 https://katfun.tistory.com/tag/springboot 에서 제 진행 과정을 확인하실 수 있습니다.  
 
 ## 실제 배포한 결과물
