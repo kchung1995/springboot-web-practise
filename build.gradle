@@ -28,7 +28,7 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 group 'org.example'
-version '1.0-SNAPSHOT'
+version '1.0.1-SNAPSHOT'
 
 //각종 의존성(library)을 어떤 repository에서 받아올지를 정하는 부분.
 repositories {
