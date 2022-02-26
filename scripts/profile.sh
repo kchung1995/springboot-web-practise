@@ -26,7 +26,6 @@ function find_idle_profile()
       fi
     fi
 
-
     echo "${IDLE_PROFILE}"
 }
 
