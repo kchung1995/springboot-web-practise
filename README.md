@@ -4,7 +4,7 @@
 https://katfun.tistory.com/tag/springboot 에서 제 진행 과정을 확인하실 수 있습니다.  
 
 ## 실제 배포한 결과물
-http://ec2-3-37-102-108.ap-northeast-2.compute.amazonaws.com:8080/
+http://ec2-3-37-102-108.ap-northeast-2.compute.amazonaws.com
 
 ### 배포 목록
 * step 1
