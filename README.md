@@ -1,5 +1,11 @@
 # SpringBoot Web Practise
 
+<div align = "center">
+
+[![Build Status](https://app.travis-ci.com/kchung1995/springboot-web-practise.svg?branch=master)](https://app.travis-ci.com/github/kchung1995/springboot-web-practise)
+
+</div>
+
 ['스프링 부트와 AWS로 혼자 구현하는 웹 서비스' (이동욱 저)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788965402602) 를 따라하며 Spring Boot의 기본과 AWS 배포에 대해 공부하는 과정을 담은 repository입니다.  
 [제 블로그](https://katfun.tistory.com/search/%ED%98%BC%EC%9E%90%20%EA%B5%AC%ED%98%84%ED%95%98%EB%8A%94%20%EC%9B%B9%EC%84%9C%EB%B9%84%EC%8A%A4) 에서 제 진행 과정을 확인하실 수 있습니다.  
 
