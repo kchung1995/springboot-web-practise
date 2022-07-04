@@ -61,7 +61,7 @@ public class PostsApiControllerTest {
     }
 
     @Test
-    @WithMockUser(roles="USER")
+    @WithMockUser(roles = "USER")
     public void Posts_등록된다() throws Exception {
         //given
         String title = "title";
@@ -75,8 +75,8 @@ public class PostsApiControllerTest {
 
         //when
         mvc.perform(post(url)
-                .contentType(MediaType.APPLICATION_JSON_UTF8)
-                .content(new ObjectMapper().writeValueAsString(requestDto)))
+                        .contentType(MediaType.APPLICATION_JSON_UTF8)
+                        .content(new ObjectMapper().writeValueAsString(requestDto)))
                 .andExpect(status().isOk());
 
         //then
@@ -86,7 +86,7 @@ public class PostsApiControllerTest {
     }
 
     @Test
-    @WithMockUser(roles="USER")
+    @WithMockUser(roles = "USER")
     public void Posts_수정된다() throws Exception {
         //given
         Posts savedPosts = postsRepository.save(Posts.builder()
@@ -109,14 +109,43 @@ public class PostsApiControllerTest {
 
         //when
         mvc.perform(put(url)
-                .contentType(MediaType.APPLICATION_JSON_UTF8)
-                .content(new ObjectMapper().writeValueAsString(requestDto)))
+                        .contentType(MediaType.APPLICATION_JSON_UTF8)
+                        .content(new ObjectMapper().writeValueAsString(requestDto)))
                 .andExpect(status().isOk());
 
         //then
         List<Posts> all = postsRepository.findAll();
         assertThat(all.get(0).getTitle()).isEqualTo(expectedTitle);
         assertThat(all.get(0).getContent()).isEqualTo(expectedContent);
+    }
+
+    @Test
+    @WithMockUser(roles = "USER")
+    public void Posts_파라미터_조회된다() throws Exception {
+        // given
+        Posts savedPosts = postsRepository.save(Posts.builder()
+                .title("title")
+                .content("content")
+                .author("author")
+                .build());
+
+        Posts savedPosts2 = postsRepository.save(Posts.builder()
+            .title("제목")
+                .content("콘텐츠")
+                .author("정규호")
+                .build());
+
+        Long updateId = savedPosts.getId();
+        Long updateId2 = savedPosts2.getId();
+
+        String expectedAuthor = "정규호";
+
+        // when
+        List<Posts> map = postsRepository.findAllDesc(updateId2, expectedAuthor);
+
+        // then
+        assertThat(map.get(0).getId()).isEqualTo(updateId2);
+        assertThat(map.get(0).getAuthor()).isEqualTo(expectedAuthor);
     }
 }
 
